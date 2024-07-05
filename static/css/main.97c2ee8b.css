@@ -61,7 +61,8 @@ p {
 }
 
 .about-container p {
-    color: #011d36;
+    color: #fff;
+    font-size: 12px;
     pointer-events: none
 }
 
