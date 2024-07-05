@@ -41604,7 +41604,7 @@
                 return (0, mM.jsxs)("div", {
                     className: "about-container example",
                     children: [n || (0, mM.jsx)("img", {
-                        src: "./close.png",
+                        src: "/logo.png",
                         alt: "",
                         className: "back",
                         onClick: function() {
@@ -41623,14 +41623,14 @@
                 return (0, mM.jsxs)("div", {
                     className: "roadmap-container example",
                     children: [n || (0, mM.jsx)("img", {
-                        src: "./close.png",
+                        src: "/logo.png",
                         alt: "",
                         className: "back",
                         onClick: function() {
                             return t()
                         }
                     }), (0, mM.jsx)("h2", {
-                        children: "Welcome to $MickyDs"
+                        children: "Welcome to $MickyDs,The First CTO of the Bear Market!"
                     }), (0, mM.jsx)("br", {}), (0, mM.jsxs)("p", {
                         children: [(0, mM.jsx)("strong", {
                             children: "\ud83c\udf5f Contract: 0x814638981890baeb84f622200d824ee71fa4a375"
@@ -41655,7 +41655,7 @@
                         children: (0, mM.jsxs)("div", {
                             className: "menu-container example",
                             children: [n || (0, mM.jsx)("img", {
-                                src: "./close.png",
+                                src: "/logo.png",
                                 alt: "",
                                 className: "back",
                                 onClick: function() {
