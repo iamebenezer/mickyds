@@ -43576,7 +43576,7 @@
                         target: "_blank",
                         children: (0, mM.jsx)(WE, {})
                     }), (0, mM.jsx)("a", {
-                        href: "http://t.me/",
+                        href: "https://t.me/McDEEZCTO",
                         target: "_blank",
                         children: (0, mM.jsx)(XE, {})
                     }), (0, mM.jsx)("a", {
