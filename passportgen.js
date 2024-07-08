@@ -16,10 +16,10 @@ const passportUploadProfile = async (ctx, file) => {
     const profileImage = new Image();
     profileImage.onload = function () {
       // Step 5: Draw the image on the canvas at a specific position
-      const posX = 95; // X-coordinate
-      const posY = 580; // Y-coordinate
+      const posX = 98; // X-coordinate
+      const posY = 600; // Y-coordinate
       const width = 150; // Optional: Width of the drawn image
-      const height = 220; // Optional: Height of the drawn image
+      const height = 190; // Optional: Height of the drawn image
 
       ctx.drawImage(profileImage, posX, posY, width, height);
     };
