@@ -1,75 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <title>MickyDs - Generate your ID</title>
-    <script src="https://cdn.tailwindcss.com"></script>    
-</head>
-<style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+  </head>
+  <style>
+    @font-face {
+      font-family: head;
+      src: url(/head.ttf);
+    }
+    @font-face {
+      font-family: texts;
+      src: url(/text.ttf);
+    }
 
-@font-face {
-  font-family: head;
-  src: url(/head.ttf);
-}
-@font-face {
-  font-family: texts;
-  src: url(/text.ttf);
-}
+    .shadow-text {
+      text-shadow: 2px 2px 1px #ba0000;
+    }
+    body {
+      background-color: #000;
+    }
 
-.shadow-text{
-  text-shadow: 2px 2px 1px #ba0000;
-}
-body{
-    background-color: #000;
-}
+    .container {
+      display: flex;
+      background-image: url(/bg.gif);
+      height: 100vh;
+      width: 100vw;
+      justify-content: center;
+      flex-direction: column;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: auto;
+      text-align: center;
+    }
 
-.container {
-    display: flex;
-    background-image: url(/bg.gif);
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    margin: auto;
-     text-align: center;
-}
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    .heading {
+      padding: 1.25rem;
+      color: yellow;
+      font-family: head;
+      font-size: 2.25rem; /* Equivalent to text-4xl in Tailwind */
+      text-shadow: 2px 3px 0px #000;
+    }
 
-}
+    .button {
+      background-image: linear-gradient(
+        to right top,
+        #ba0000,
+        #b7002b,
+        #a6004a,
+        #8a0063,
+        #610075
+      );
+      font-family: head;
+      border: 1px dashed white;
+      box-shadow: 0px 4px 6px -1px rgba(255, 0, 0, 0.9); /* Example shadow to mimic shadow-sm shadow-red-900 */
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      color: white;
+      width: fit-content;
+      font-size: 1rem; /* Adjust as needed */
+    }
 
-.heading {
-    padding: 1.25rem;
-    color: yellow;
-    font-family: head;
-    font-size: 2.25rem; /* Equivalent to text-4xl in Tailwind */
-    text-shadow: 2px 3px 0px #000;
-
-}
-
-.button {
-    background-image: linear-gradient(to right top, #ba0000, #b7002b, #a6004a, #8a0063, #610075);
-    font-family: head;
-    border: 1px dashed white;
-    box-shadow: 0px 4px 6px -1px rgba(255, 0, 0, 0.9); /* Example shadow to mimic shadow-sm shadow-red-900 */
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    color: white;
-    width: fit-content;
-    font-size: 1rem; /* Adjust as needed */
-}
-
-@keyframes pulse {
+    @keyframes pulse {
       0% {
         transform: scale(1);
         opacity: 1;
@@ -85,18 +96,243 @@ body{
     }
 
     .pulse {
-   
       animation: pulse 2s infinite;
-   
     }
-</style>
-<body>
-    <div class="container" >
-        <div class="content">
-            <h1 class="heading" style="font-family: texts;">Dear Employee</h1>
-            <button class="button pulse">Generate Your ID</button>
-        </div>
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid yellow;
+      padding: 20px;
+      color: #fff;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background: transparent;
+      outline: none;
+      font-family: head;
+      color: white;
+    }
+
+    input[type="date"]:focus {
+      border-color: #66afe9;
+      box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #5cb85c;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: texts;
+    }
+
+    button:hover {
+      padding: 10px 19px;
+      background: linear-gradient(
+        to right top,
+        #ba0000,
+        #b7002b,
+        #a6004a,
+        #8a0063,
+        #610075
+      );
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1 class="heading" style="font-family: texts">Dear Employee</h1>
+      </div>
+      <div class="form-container" id="passportModal">
+        <h1 style="font-family: head">Job Application Form</h1>
+        <form id="jobForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              aria-describedby="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input
+              type="text"
+              id="datepicker"
+              aria-describedby="date birth"
+              name="dob"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="sex">Sex</label>
+            <select
+              aria-label="Default select example"
+              id="gender"
+              name="sex"
+              required
+              style="background-color: transparent; padding: 6px"
+            >
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <select
+              id="title"
+              name="title"
+              required
+              style="background-color: transparent; padding: 6px"
+            >
+              <option value="burger-boy" style="font-family: head">
+                Burger Boy
+              </option>
+              <option value="french fries chef">French Frie Chef</option>
+              <option value="shake-maker">Shake Maker</option>
+              <option value="nuggie-perfecter">Nuggie Perfecter</option>
+              <option value="front-counter">Front Counter</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="avatar-2">Upload your picture</label>
+            <input
+              id="avatar-2"
+              name="avatar-2"
+              type="file"
+              required
+              accept="image/*"
+            />
+            <div class="kv-avatar-hint">
+              <small>Please make sure the image size (160x220)</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <button
+              style="font-family: texts"
+              type="button"
+              class="btn btn-primary"
+              onclick="generatePassport();"
+            >
+              Generate Passport
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    
-</body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.barfiller@1.1.2/dist/jquery.barfiller.min.js"></script>
+    <script src="script.js"></script>
+    <script src="passportgen.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#datepicker').datepicker({
+          format: 'mm/dd/yyyy',
+          autoclose: true,
+          todayHighlight: true,
+        });
+
+        $('.form-container').tilt({
+          glare: true,
+          maxGlare: 0.5,
+        });
+      });
+
+      function generatePassport() {
+        const name = document.getElementById('name').value;
+        const dob = document.getElementById('datepicker').value;
+        const gender = document.getElementById('gender').value;
+        const title = document.getElementById('title').value;
+        const fileInput = document.getElementById('avatar-2');
+        const file = fileInput.files[0];
+
+        if (!name || !dob || !gender || !title || !file) {
+          alert('Please fill in all fields and upload an image.');
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = new Image();
+          img.onload = function () {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = 300;
+            canvas.height = 400;
+
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.drawImage(img, 70, 20, 160, 220);
+
+            ctx.fillStyle = '#fff';
+            ctx.font = '20px Arial';
+            ctx.fillText(`Name: ${name}`, 20, 280);
+            ctx.fillText(`DOB: ${dob}`, 20, 310);
+            ctx.fillText(`Gender: ${gender}`, 20, 340);
+            ctx.fillText(`Title: ${title}`, 20, 370);
+
+            const link = document.createElement('a');
+            link.download = `${name}_passport.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    </script>
+  </body>
 </html>
