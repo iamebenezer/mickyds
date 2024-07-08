@@ -43572,6 +43572,7 @@
             var JE = function() {
                 return (0, mM.jsxs)("div", {
                     className: "social-container",
+                    
                     children: [(0, mM.jsx)("a", {
                         href: "https://twitter.com/",
                         target: "_blank",
@@ -43580,13 +43581,22 @@
                         href: "https://t.me/McDEEZCTO",
                         target: "_blank",
                         children: (0, mM.jsx)(XE, {})
-                    }), (0, mM.jsx)("a", {
+                    }),
+                    (0, mM.jsx)("a", {
+                        href: "/card.html",
+                        target: "_blank",
+                        children: (0, mM.jsx)("img", {
+                            src: "id.svg",
+                            alt: "My Happy SVG"
+                        }), 
+                    }),
+                    (0, mM.jsx)("a", {
                         href: "https://www.dextools.io/app/en/ether/pair-explorer/0x8b19372671996f4cf362edb8f35157f2a2d04b86?t=1720178933045",
                         target: "_blank",
                         children: (0, mM.jsx)("img", {
                             src: "dextools.svg",
                             alt: "My Happy SVG"
-                        })
+                        }), 
                     })]
                 })
             };
