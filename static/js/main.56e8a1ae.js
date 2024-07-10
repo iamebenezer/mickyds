@@ -43574,7 +43574,7 @@
                     className: "social-container",
                     
                     children: [(0, mM.jsx)("a", {
-                        href: "https://twitter.com/",
+                        href: "https://x.com/mickyds01",
                         target: "_blank",
                         children: (0, mM.jsx)(WE, {})
                     }), (0, mM.jsx)("a", {
