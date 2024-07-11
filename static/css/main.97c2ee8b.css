@@ -35,8 +35,8 @@ p {
 }
 
 .back {
-    height: 40px;
-    width: 40px
+    height: 10px;
+    width: 10px
 }
 
 .about-container .back,
@@ -48,8 +48,8 @@ p {
 }
 
 .about-container .back {
-    height: 30px;
-    width: 30px
+    height: 10px;
+    width: 10px
 }
 
 .about-container {

@@ -41604,7 +41604,7 @@
                 return (0, mM.jsxs)("div", {
                     className: "about-container example",
                     children: [n || (0, mM.jsx)("img", {
-                        src: "/logo.png",
+                        src: "/close.png",
                         alt: "",
                         className: "back",
                         onClick: function() {
@@ -41624,7 +41624,7 @@
                 return (0, mM.jsxs)("div", {
                     className: "roadmap-container example",
                     children: [n || (0, mM.jsx)("img", {
-                        src: "/logo.png",
+                        src: "/close.png",
                         alt: "",
                         className: "back",
                         onClick: function() {
@@ -41656,7 +41656,7 @@
                         children: (0, mM.jsxs)("div", {
                             className: "menu-container example",
                             children: [n || (0, mM.jsx)("img", {
-                                src: "/logo.png",
+                                src: "/close.png",
                                 alt: "",
                                 className: "back",
                                 onClick: function() {

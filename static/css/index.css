@@ -42,8 +42,8 @@ p {
 }
 
 .about-container .back {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     position: fixed;
     right: 0;
     cursor: pointer;
